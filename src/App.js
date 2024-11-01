@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Profile from "./Components/Profile";
 import Home from "./Components/Home";
+import Instructions from "./Components/Instructions";
 
 const App = () => {
   return (
@@ -34,6 +35,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "profile",
         element: <Profile />,
+      },
+      {
+        path: "instructions",
+        element: <Instructions />,
       },
     ],
   },
