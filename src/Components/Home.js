@@ -20,7 +20,7 @@ const Home = () => {
       <div className="w-1/2 flex mt-28 flex-col items-center">
         <div className="mt-8 flex justify-center">
           <h1 className="font-bold inline-flex font-serif font-extrabold text-3xl text-[#FCCD2A]">
-            Introducing <span className="ml-2 text-3xl text-[#006BFF]">VIT | COMPREHENSIVE SITE</span>
+            Introducing <span className="ml-2 text-3xl text-[#006BFF]">VIT | COMPREHENSIVE QUIZ</span>
           </h1>
         </div>
         <div className="mt-16 text-center">

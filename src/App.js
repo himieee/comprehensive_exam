@@ -6,6 +6,7 @@ import About from "./Components/About";
 import Profile from "./Components/Profile";
 import Home from "./Components/Home";
 import Instructions from "./Components/Instructions";
+import Quiz from "./Components/Quiz";
 
 const App = () => {
   return (
@@ -39,6 +40,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "instructions",
         element: <Instructions />,
+      },
+      {
+        path: "quiz",
+        element: <Quiz />,
       },
     ],
   },
