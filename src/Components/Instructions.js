@@ -11,6 +11,7 @@ const Instructions = () => {
         <ul className="list-disc mx-4 mt-2">
         <li>The comprehensive exam consists of 100 multiple-choice questions (MCQs).</li>
         <li>Each question has four options, out of which only one is correct.</li>
+        <li>The exam duration is <u>2 hours.</u></li>
         </ul>
         
         <h3 className="mt-4 text-xl font-semibold">Eligibility:</h3>
