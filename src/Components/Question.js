@@ -9,7 +9,8 @@ const Question = (props) => {
   };
 
   return (
-    <div className="border-2 rounded-lg w-5/5 border-[#1E3E62] my-1 flex flex-col ">
+    <div className="border-2 rounded-lg w-5/5 border-[#1E3E62] my-1 flex flex-col select-none">
+    <div className="ml-2 mt-2">
       <h1>
         {" "}
         <b>Question: </b> {data.question}
@@ -28,10 +29,11 @@ const Question = (props) => {
         </h4>
       ))}
       {selectedOption && 
-      <div className="mt-5 mx-2">
+      <div className="mt-2 mx-2">
         {selectedOption===data.answer?(<span className="text-green-500">Correct 🎉</span>):(<span className="text-red-500">Incorrect 😔</span>)}
       </div>
       }
+    </div>
     </div>
   );
 };
