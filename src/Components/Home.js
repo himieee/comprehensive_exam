@@ -1,14 +1,15 @@
 import React from "react";
 import Lottie from "react-lottie";
-import comprehensivequiz from "../Assets/comprehensivequiz.json";
-import { Link, NavLink } from "react-router-dom";
+// import comprehensivequiz from "../Assets/comprehensivequiz.json";
+import comprehensivequizupdated from "../Assets/comprehensivequizupdated.json";
+import { Link} from "react-router-dom";
 
 const Home = () => {
 
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: comprehensivequiz,
+    animationData: comprehensivequizupdated,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },

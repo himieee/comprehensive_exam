@@ -9,7 +9,7 @@ const Question = (props) => {
   };
 
   return (
-    <div className="border-2 rounded-lg w-5/5 border-[#1E3E62] my-1 flex flex-col select-none">
+    <div className="border-2 rounded-lg w-5/5 border-[#1E3E62] my-2 flex flex-col select-none">
     <div className="ml-2 mt-2">
       <h1>
         {" "}

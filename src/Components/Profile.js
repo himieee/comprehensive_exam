@@ -5,7 +5,7 @@ import profilecoverphoto from "../Assets/profilecoverphoto.jpg";
 
 const Profile = () => {
   const [profileData, setProfileData] = useState("Null");
-  const [profileRepos, setProfileRepos] = useState("Null");
+  // const [profileRepos, setProfileRepos] = useState("Null");
   const [showConfetti, setshowConfetti] = useState(false);
 
   const getProfile = async () => {
@@ -14,13 +14,13 @@ const Profile = () => {
     );
     const jsonProfile = await userProfile.json();
     console.log(jsonProfile);
-    const userRepos = await fetch(
-      "https://api.github.com/users/deepanshurana16/repos"
-    );
-    const jsonRepos = await userRepos.json();
-    console.log(jsonRepos);
+    // const userRepos = await fetch(
+    //   "https://api.github.com/users/deepanshurana16/repos"
+    // );
+    // const jsonRepos = await userRepos.json();
+    // console.log(jsonRepos);
     setProfileData(jsonProfile);
-    setProfileRepos(jsonRepos);
+    // setProfileRepos(jsonRepos);
   };
 
   useEffect(() => {
@@ -51,6 +51,7 @@ const Profile = () => {
     // </div>
     // </div>
     <div className="w-full h-screen flex bg-[#FCFAEE] justify-center">
+    {showConfetti && <Confetti numberOfPieces={200} />}
       <div className="w-80 h-[540px] border border-2 mt-10 relative rounded-lg shadow-lg">
         {/* Cover Photo */}
         <div className="w-full h-2/6 rounded-t-lg overflow-hidden relative">
@@ -73,7 +74,7 @@ const Profile = () => {
           <span className="text-sm text-slate-100 font-medium mx-3 border-2 rounded-full p-1 mt-4 inline-block bg-violet-500 border-violet-500">🎓 Final Year Student</span>
           <span className="text-sm text-slate-100 font-medium mx-3 border-2 rounded-full p-1 mt-4 inline-block bg-rose-500 border-rose-500">📚 CSE with Business Systems</span><br></br>
           <span className="text-sm text-slate-100 font-medium mx-3 border-2 rounded-full p-1 mt-4 inline-block border-sky-400 bg-sky-400">📍 {profileData.location}</span><br></br>
-          <span className="text-sm text-black-100 font-medium mx-3 border-2 rounded-full p-1 mt-4 inline-block font-bold hover:text-indigo-700 visited:text-purple-600">🔗 {profileData.html_url}</span>
+          <a href={profileData.html_url} className="text-sm text-black-100 font-medium mx-3 border-2 rounded-full p-1 mt-4 inline-block font-bold hover:text-indigo-700 visited:text-purple-600">🔗 {profileData.html_url}</a>
 
         </div>
       </div>
