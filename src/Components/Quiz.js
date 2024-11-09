@@ -19,13 +19,13 @@ const Quiz = () => {
   return (
     <div className="w-full h-screen flex bg-[#FCFAEE] justify-center">
       <div
-        className="border-2 rounded-lg w-3/5 h-5/6 border-[#1E3E62] my-1 flex flex-col overflow-y-auto p-4"
+        className="border-2 rounded-lg w-3/5 h-5/6 border-[#1E3E62] my-1 flex flex-col overflow-y-auto p-2"
         style={{
           scrollbarWidth: "thin",
           scrollbarColor: "#FCFAEE,",
         }}
       >
-      <div className="flex justify-center">
+      <div className="flex justify-center outline-dotted outline-2 p-2 mb-2">
       <button className="w-48 rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300 mx-4" onClick={handleshuffleQuestions}>Shuffle Questions</button>
       <button className="w-48 rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300 mx-4" onClick={handleShuffleOptions}>Shuffle Options</button>
       </div>

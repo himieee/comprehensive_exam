@@ -1,6 +1,5 @@
 import React from "react";
 import Lottie from "react-lottie";
-// import comprehensivequiz from "../Assets/comprehensivequiz.json";
 import comprehensivequizupdated from "../Assets/comprehensivequizupdated.json";
 import { Link} from "react-router-dom";
 
