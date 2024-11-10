@@ -56,8 +56,11 @@ const Instructions = () => {
         </table>
         
         <div className="mt-8 text-center">
+        <Link to="/">
+      <button className="w-48 rounded-lg px-4 py-2 bg-yellow-500 text-black hover:bg-blue-600 hover:text-white duration-300 mx-4">Back to Home Page</button>
+      </Link>
           <Link to="/quiz">
-            <button className="w-48 rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300">
+            <button className="w-48 rounded-lg px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 hover:text-white duration-300">
               Let's Begin Quiz
             </button>
           </Link>

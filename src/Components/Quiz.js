@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { quesList } from "../utils/quesList";
 import Question from "./Question";
 import arrayShuffle from "array-shuffle";
+import { Link } from "react-router-dom";
 
 const Quiz = () => {
   const [shuffledList, setshuffledList] = useState(quesList);
@@ -26,8 +27,11 @@ const Quiz = () => {
         }}
       >
       <div className="flex justify-center outline-dotted outline-2 p-2 mb-2">
-      <button className="w-48 rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300 mx-4" onClick={handleshuffleQuestions}>Shuffle Questions</button>
-      <button className="w-48 rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300 mx-4" onClick={handleShuffleOptions}>Shuffle Options</button>
+      <Link to="/instructions">
+      <button className="w-48 rounded-lg px-4 py-2 bg-yellow-500 text-black hover:bg-blue-600 hover:text-white duration-300 mx-4">Back to Instructions</button>
+      </Link>
+      <button className="w-48 rounded-lg px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 hover:text-white duration-300" onClick={handleshuffleQuestions}>Shuffle Questions</button>
+      <button className="w-48 rounded-lg px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 hover:text-white duration-300 mx-4" onClick={handleShuffleOptions}>Shuffle Options</button>
       </div>
       
 
