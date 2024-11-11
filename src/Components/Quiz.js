@@ -7,15 +7,18 @@ import { Link } from "react-router-dom";
 const Quiz = () => {
   const [shuffledList, setshuffledList] = useState(quesList);
 
-  const handleshuffleQuestions = ()=>{
+  const handleshuffleQuestions = () => {
     const newshuffledQuestionList = arrayShuffle(shuffledList);
-      setshuffledList(newshuffledQuestionList);
-  }
+    setshuffledList(newshuffledQuestionList);
+  };
 
-  const handleShuffleOptions = ()=>{
-    const newshuffledOptionsList = shuffledList.map((question)=>({...question,options:arrayShuffle(question.options)}))
+  const handleShuffleOptions = () => {
+    const newshuffledOptionsList = shuffledList.map((question) => ({
+      ...question,
+      options: arrayShuffle(question.options),
+    }));
     setshuffledList(newshuffledOptionsList);
-  }
+  };
 
   return (
     <div className="w-full h-screen flex bg-[#FCFAEE] justify-center">
@@ -26,14 +29,25 @@ const Quiz = () => {
           scrollbarColor: "#FCFAEE,",
         }}
       >
-      <div className="flex justify-center outline-dotted outline-2 p-2 mb-2">
-      <Link to="/instructions">
-      <button className="w-48 rounded-lg px-4 py-2 bg-yellow-500 text-black hover:bg-blue-600 hover:text-white duration-300 mx-4">Back to Instructions</button>
-      </Link>
-      <button className="w-48 rounded-lg px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 hover:text-white duration-300" onClick={handleshuffleQuestions}>Shuffle Questions</button>
-      <button className="w-48 rounded-lg px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 hover:text-white duration-300 mx-4" onClick={handleShuffleOptions}>Shuffle Options</button>
-      </div>
-      
+        <div className="flex justify-center outline-dotted outline-2 p-2 mb-2">
+          <Link to="/instructions">
+            <button className="w-48 rounded-lg px-4 py-2 bg-yellow-500 text-black hover:bg-blue-600 hover:text-white duration-300 mx-4">
+              Back to Instructions
+            </button>
+          </Link>
+          <button
+            className="w-48 rounded-lg px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 hover:text-white duration-300"
+            onClick={handleshuffleQuestions}
+          >
+            Shuffle Questions
+          </button>
+          <button
+            className="w-48 rounded-lg px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 hover:text-white duration-300 mx-4"
+            onClick={handleShuffleOptions}
+          >
+            Shuffle Options
+          </button>
+        </div>
 
         <div className="p-4 overflow-y-auto">
           {shuffledList.map((question, index) => (

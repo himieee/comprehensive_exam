@@ -16,12 +16,11 @@ const Question = (props) => {
         </h1>
 
         {data.options.map((option, index) => {
-
           let optionClass = "";
           if (selectedOption) {
             if (option === selectedOption) {
               optionClass =
-                option === data.answer ? "bg-green-300" : "bg-red-300"; 
+                option === data.answer ? "bg-green-300" : "bg-red-300";
             }
           }
 

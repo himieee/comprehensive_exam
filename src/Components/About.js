@@ -14,7 +14,7 @@ const About = () => {
             radar too. The question bank? 1600 questions with zero answers. Yep,
             none. What followed was a long, exhausting hunt to figure out each
             answer and try to prepare without losing it. That’s when I thought,
-            “Why not build something to make this easier for everyone?”
+            “Why not build something to make this easier for every VITian?”
           </h4>
         </div>
         <div>
