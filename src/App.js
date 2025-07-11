@@ -3,7 +3,6 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
-import Profile from "./Components/Profile";
 import Home from "./Components/Home";
 import Instructions from "./Components/Instructions";
 import Quiz from "./Components/Quiz";
@@ -32,10 +31,6 @@ export const appRouter = createBrowserRouter([
       {
         path: "about",
         element: <About />,
-      },
-      {
-        path: "profile",
-        element: <Profile />,
       },
       {
         path: "instructions",
